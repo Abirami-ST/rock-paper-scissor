@@ -1,0 +1,54 @@
+<div class="bgImg" [ngClass]="{bgImg:true}">
+  <form [formGroup]="signUpForm" class="signUpForm">
+    <h1 [ngStyle]="{textAlign:'center', color:'gold'}">Sign Up</h1>
+
+    <label class="label" for="userName">User Name: </label>
+    <input class="input" type="text" name="userName" placeholder="Enter UserName" formControlName="username">
+    <div *ngIf="username.touched && username.errors?.required" class="Error">
+      Username field cannot be empty
+    </div>
+    <!-- <div *ngIf="username.dirty && username.invalid && username.errors">
+      Username is Incorrect!!
+    </div> -->
+    <br>
+  
+    <label class="label" for="email">Email: </label>
+    <input class="input" type="email" name="email" placeholder="Enter E-mail" formControlName="email">
+    <div *ngIf="email.touched && email.errors?.required" class="Error">
+      Please Enter an E-mail Id
+    </div>
+    <div *ngIf="email.dirty && email.invalid && email.errors?.email" class="Error">
+      Please enter a valid E-mail
+    </div>
+    <div *ngIf="email.errors?.emailTaken" class="Error">
+      E-Mail Id already exists
+    </div>
+    <br>
+  
+    <label class="label" for="password">Password: </label>
+    <input class="input" type="password" name="password" placeholder="Enter Password" formControlName="password">
+    <div *ngIf="password.touched && password.errors?.required" class="Error">
+      Password is required
+    </div>
+    <!-- <div *ngIf="password.dirty && password.invalid && password.errors">
+      Please Enter the Correct Password!!
+    </div> -->
+    <div *ngIf="password.value && password.value?.length < 8" class="Error">
+      Minimum 8 characters required
+    </div>
+    <br>
+  
+    <label class="label" for="confirmPassword">Confirm Password: </label>
+    <input class="input" type="password" name="confirmPassword" placeholder="Re-enter Password" formControlName="confirmPassword">
+    <div *ngIf="confirmPwd.touched && confirmPwd.errors?.required" class="Error">
+      Confirm Password is required
+    </div>
+    <div *ngIf="signUpForm.errors?.['mismatch'] && confirmPwd.value" class="Error">
+      Password does not match
+    </div>
+    <br>
+  
+    <button (click)="onSignUp()" [disabled]="signUpForm.invalid" class="signUpBtn">Sign Up</button>
+    <p class="para">Already have an account?&nbsp;<a class="link" routerLink="/login"> Login</a></p>
+  </form>
+</div>

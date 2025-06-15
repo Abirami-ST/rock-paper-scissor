@@ -1,0 +1,21 @@
+<div class="title">
+  <div *ngIf="successAlertLogin !== ''" class="s-alert">
+    <span class="closeAlertBtn" (click)="closeAlert()">&times;</span>
+    {{successAlertLogin}}&#9989;
+  </div>
+  <h1 class="title-2"><marquee hspace="300px" behavior="alternate">Rock Paper Scissors Game</marquee> 
+  <div class="header-buttons">
+    <button class="logout-button" (click)="onLogOut()">Logout</button>
+    <button class="loggedin-user">{{currentUsername}}</button>
+    <div *ngIf="showButton" class="confirmLODiv">
+      <p>Are You sure want to logout?</p>
+      <button (click)="clickOkay()" class="logout-okay">Okay</button>
+      <button (click)="onCancel()" class="logout-cancel">Cancel</button>
+    </div>
+  </div>
+  </h1>   
+</div>
+<!-- <div class="my-header">
+  <h2>Title</h2>
+  <span>Status</span>
+</div> -->

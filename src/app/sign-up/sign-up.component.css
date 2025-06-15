@@ -1,0 +1,88 @@
+.bgImg {
+  background-image: url("/assets/bg-black.jpg");
+  background-size: contain;
+  background-repeat: repeat-x;
+  height: 120vh;
+  width: 100%;
+  position: absolute;
+}
+
+.signUpForm {
+  /* border: 1px solid gold; */
+  background-color: #8080804a;
+  border-radius: 74px;
+  width: 400px;
+  height: 600px;
+  font-weight: bold;
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  padding: 10px;
+  font-family: Copperplate, Papyrus, fantasy;
+}
+
+.input {
+  border: none;
+  border-bottom: 2px solid rgba(234, 214, 100, 0.5);
+  width: 80%;
+  margin-bottom: 5px;
+  display: block;
+  margin: 10px auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid gold;
+}
+
+.label {
+  font-size: 14px;
+  margin-left: 37px;
+  color: gold;
+  margin-bottom: 10px;
+}
+
+.Error {
+  color: red;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 12px;
+  margin-left: 40px;
+  font-family: Tahoma, Verdana, sans-serif;
+}
+
+.signUpBtn,
+button:disabled {
+  padding: 10px 20px;
+  background-color: gold;
+  color: black;
+  border-radius: 40px;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  font-family: Copperplate, Papyrus, fantasy;
+  font-weight: bold;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.para,
+.link {
+  font-family: Copperplate, Papyrus, fantasy;
+  color: white;
+  text-align: center;
+}
+
+.link {
+  color: gold;
+  cursor: pointer;
+}
+
+.link:active {
+  color: white;
+}

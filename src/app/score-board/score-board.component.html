@@ -1,0 +1,25 @@
+<div class="score-block">
+  <h1 [ngClass]="{'tot-matches':true}">Total Matches: {{totalMatchesFromService}}</h1>
+
+  <table class="table-block">
+    <tr>
+      <td>Total Wons: </td>
+      <td>{{scoreFromService.wins}}</td>
+    </tr>
+    <tr>
+      <td>Total Losses: </td>
+      <td>{{scoreFromService.losses}}</td>
+    </tr>
+    <tr>
+      <td>Total Ties: </td>
+      <td>{{scoreFromService.ties}}</td>
+    </tr>
+  </table>
+  <!-- <p>Total Wons: {{scoreFromService.wins}}</p>
+  <p>Total Losses: {{scoreFromService.losses}}</p>
+  <p>Total Ties: {{scoreFromService.ties}}</p> -->
+  <div class="reset-div">
+    <button (click)="resetScore()" class="reset-button">Reset Score</button>
+  </div>
+ 
+</div>

@@ -1,0 +1,41 @@
+<div class="bgImg">
+  <div *ngIf="successAlertSignUp !== ''"  class="s-alert">
+    <span class="closeAlertBtn" (click)="closeAlert()">&times;</span>
+    {{successAlertSignUp}}&#9989;
+  </div>
+  <div *ngIf="errorLoginStatus !== ''"  class="e-alert">
+    <span class="closeAlertBtn" (click)="closeAlert()">&times;</span>
+    {{errorLoginStatus}}&#10060;
+  </div>
+  <form [formGroup]="loginForm" class="loginForm">
+    <h1 [ngStyle]="{textAlign:'center', color:'gold'}">Login</h1>
+
+    <label class="label" for="email" >E-mail: </label>
+    <input autocomplete="off" class="input" type="email" name="email" placeholder="Enter E-mail" formControlName="email" >
+    <div class="Error" *ngIf="email.touched && email.errors?.required">
+      Please enter an E-mail Id
+    </div>
+    <div class="Error" *ngIf=" email.dirty && email.invalid &&email.errors?.email">
+      Please enter a valid E-mail
+    </div>
+    
+ 
+    <label class="label" for="password">Password: </label>
+    <input class="input" type="password" name="password" placeholder="Enter Password" formControlName="password">
+    <div class="Error" *ngIf="password.touched && password.errors?.required">
+      Password Field Cannot be Empty
+    </div>
+
+    
+    <!-- <div *ngIf="password.dirty && password.invalid && password.errors">
+      Please Enter the Correct Password!!
+    </div> -->
+    <p class="para">
+      <a class="link" href="">Forgot Password?</a>
+    </p>
+    <button class="loginBtn" (click)="onLogin()" [disabled]="loginForm.invalid">Login</button>
+    <div>
+      <p class="para">Create a New Account <a class="link" [routerLink]="'/sign-up'">Sign Up</a></p> 
+    </div>
+  </form> 
+</div>

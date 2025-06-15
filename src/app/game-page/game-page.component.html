@@ -1,0 +1,47 @@
+<div>
+  <!-- <div *ngIf="successAlertLogin !== ''" class="s-alert">
+    <span class="closeAlertBtn" (click)="closeAlert()">&times;</span>
+    {{successAlertLogin}}&#9989;
+  </div> -->
+  <app-header></app-header>
+</div>
+
+<div class="buttons-block">
+  <button class="move-button" (click)="onClickRock()"><img class="move-icon" src="./assets/Rock-emoji.png"></button>
+  <button class="move-button" (click)="onClickPaper()"><img class="move-icon" src="./assets/Paper-emoji.png"></button>
+  <button class="move-button" (click)="onClickScissor()"><img class="move-icon" src="./assets/Scissor-emoji.png"></button>
+</div>
+
+<div class="flex-blocks">
+  <div class="tile">
+    <h1>{{resultFromService}}!!!</h1>
+    <mat-grid-list  cols=2 rowHeight="2:1">
+      <mat-grid-tile>
+        <mat-grid-tile-header>
+          Your Move!!!
+        </mat-grid-tile-header>
+        <!-- <div *ngIf="playerMove === ''"><img src="assets\rpc-hands.png"></div> -->
+        <!-- <img class="move-icon" src="assets\{{playerMove}}-emoji.png" alt="Player"> -->
+        <img class="move-icon" [src]="playerMoveUrl || './assets/rpc-hands.png'" alt="Player">
+        <mat-grid-tile-footer>
+          {{playerMove}}
+        </mat-grid-tile-footer>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-grid-tile-header>
+          Computer Move!!!
+        </mat-grid-tile-header>
+        <!-- <img class="move-icon" src="assets\{{computerMove}}-emoji.png" alt="Computer"> -->
+        <img class="move-icon" [src]="computerMoveUrl || './assets/rpc-hands.png'" alt="Computer">
+        <mat-grid-tile-footer>
+          {{computerMove}}
+        </mat-grid-tile-footer>
+      </mat-grid-tile>
+    </mat-grid-list>
+    
+  </div>
+
+  <div class="score-card">
+    <app-score-board [currentUserId]="currentUserId"></app-score-board>
+  </div>
+</div>
