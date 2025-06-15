@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "rock-paper-scissor-game": {
+    "rock-paper-scissor": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
