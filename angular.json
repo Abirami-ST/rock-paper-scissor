@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/rock-paper-scissor-game",
+            "outputPath": "dist/rock-paper-scissor",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -43,7 +43,7 @@
           },
           "configurations": {
             "production": {
-              "baseHref": "/rock-paper-scissor-game",
+              "baseHref": "/rock-paper-scissor",
               "budgets": [
                 {
                   "type": "initial",
@@ -70,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "rock-paper-scissor-game:build:production"
+              "buildTarget": "rock-paper-scissor:build:production"
             },
             "development": {
-              "buildTarget": "rock-paper-scissor-game:build:development"
+              "buildTarget": "rock-paper-scissor:build:development"
             }
           },
           "defaultConfiguration": "development"

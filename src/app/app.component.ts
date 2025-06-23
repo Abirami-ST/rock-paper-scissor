@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'rock-paper-scissor-game';
+  title = 'Rock Paper Scissor'
 
   //bgImgUrl = 'assets/bg-black.jpg';
 }
