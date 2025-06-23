@@ -1,4 +1,4 @@
-<div class="bgImg" [ngStyle]="{'background-image':'url(./assets/bg-black.jpg)'}">
+<div class="bgImg" [style.background-image]="'url(./assets/bg-black.jpg)'">
   <div *ngIf="successAlertSignUp !== ''"  class="s-alert">
     <span class="closeAlertBtn" (click)="closeAlert()">&times;</span>
     {{successAlertSignUp}}&#9989;
