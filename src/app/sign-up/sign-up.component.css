@@ -1,5 +1,5 @@
 .bgImg {
-  background-image: url("/assets/bg-black.jpg");
+  /* background-image: url("/assets/bg-black.jpg"); */
   background-size: contain;
   background-repeat: repeat-x;
   height: 120vh;
