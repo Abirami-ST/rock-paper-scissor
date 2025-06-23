@@ -68,10 +68,11 @@ export class SignUpComponent implements OnInit{
         totalMatches: 0
       
       };        
-      this.authService.addUsers(payload).subscribe(data => {
-        this.usersSignedIn = data;
-        console.log('Signed In users : ', this.usersSignedIn);
-      });
+      // this.authService.addUsers(payload).subscribe(data => {
+      //   this.usersSignedIn = data;
+      //   console.log('Signed In users : ', this.usersSignedIn);
+      // });
+      this.authService.addUsers(payload);
       this.router.navigate(['/login']);
       this.alertService.setSuccessAlert('You have been Signed In SuccessFully');
     }

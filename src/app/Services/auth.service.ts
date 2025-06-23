@@ -55,8 +55,10 @@ export class AuthService {
     return sessionStorage.getItem("userId");
   }
 
-  addUsers(payload) {
-    return this.http.post(this.usersURL, payload);
+   addUsers(newUser) {
+  //   return this.http.post(this.usersURL, payload);
+    Users.push(newUser);
+    this.getUsers();
   }
 
   getUsers() {

@@ -45,7 +45,7 @@ export class ScoreDataService {
   //   //localStorage.setItem('Total Matches', JSON.stringify(this.totalMatches));
   // }
 
-  updateScoreOnServer(userID: string){
+  //updateScoreOnServer(userID: string){
     // console.log("i'm in method called update score on server");
     // console.log("score: ", this.score);
     // console.log("Total Matches: ", this.totalMatches);
@@ -61,7 +61,7 @@ export class ScoreDataService {
     //   // this.authService.currentUser.score = updatedScore
     //   this.score = updatedScore.score;
     //   this.totalMatches = updatedScore.totalMatches + 1;
-  }
+  //}
   
    getScoreWhileLogin(userId:string){
     console.log("I'm in get score while login mehtod");

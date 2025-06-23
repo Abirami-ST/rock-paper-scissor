@@ -21,7 +21,7 @@ export class ScoreBoardComponent {
     //this.currentUserId = this.scoreDataService.currentUser.userId;
     //this.authService.getScoreWhileLogin(this.currentUserId);
     this.getDataFromService(); 
-    this.totalMatchesFromService = this.scoreDataService.totalMatches;
+    this.totalMatchesFromService = this.authService.currentUser.totalMatches;
   }
 
   getDataFromService(){
@@ -30,7 +30,7 @@ export class ScoreBoardComponent {
     this.scoreFromService = this.authService.currentUser.score;
     console.log("Score from get data from service: ", this.scoreFromService);
     this.resultFromService = this.scoreDataService.result;
-    
+    //this.totalMatchesFromService = this.authService.currentUser.totalMatches;
     console.log("Total Macthes from get data from service: ", this.totalMatchesFromService);
   }
 
@@ -72,7 +72,7 @@ export class ScoreBoardComponent {
     // this.scoreDataService.totalMatches = this.totalMatchesFromService;
     console.log("Total Matches sending to the service: ", this.totalMatchesFromService);
 
-    this.scoreDataService.updateScoreOnServer(this.currentUserId);
+   // this.scoreDataService.updateScoreOnServer(this.currentUserId);
     this.scoreDataService.getScoreWhileLogin(this.currentUserId);
     //this.getDataFromService();
 

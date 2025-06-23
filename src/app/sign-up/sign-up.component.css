@@ -2,7 +2,7 @@
   /* background-image: url("/assets/bg-black.jpg"); */
   background-size: contain;
   background-repeat: repeat-x;
-  height: 120vh;
+  height: 150vh;
   width: 100%;
   position: absolute;
 }
@@ -12,7 +12,7 @@
   background-color: #8080804a;
   border-radius: 74px;
   width: 400px;
-  height: 600px;
+  height: 700px;
   font-weight: bold;
   display: block;
   margin: auto;

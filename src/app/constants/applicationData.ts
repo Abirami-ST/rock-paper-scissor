@@ -115,18 +115,5 @@ export const Users = [
       ties: 3,
     },
     totalMatches: 6,
-  },
-  {
-    userId: '0402',
-    username: 'Check',
-    email: 'check@gmail.com',
-    password: 'Check@123',
-    confirmPassword: 'Check@123',
-    score: {
-      wins: 0,
-      losses: 0,
-      ties: 0,
-    },
-    totalMatches: 0,
-  },
+  }
 ];
