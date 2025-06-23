@@ -1,4 +1,5 @@
-<div class="title">
+<div class="title" [style.background-image]="'url(assets/bg-header-star.jpg)'">
+  <!-- <img src="./assets/bg-header-star.jpg" > -->
   <div *ngIf="successAlertLogin !== ''" class="s-alert">
     <span class="closeAlertBtn" (click)="closeAlert()">&times;</span>
     {{successAlertLogin}}&#9989;

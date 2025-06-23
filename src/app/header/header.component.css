@@ -1,6 +1,6 @@
 .title{
-  background-image: url('/assets/bg-header-star.jpg');
-  background-size: contain;
+  /* background-image: url('/assets/bg-header-star.jpg'); */
+  background-size:contain;
   background-repeat: repeat-x;
   border: none;
   padding: 5px;
@@ -8,7 +8,7 @@
   text-align: Center;
   font-family: Copperplate, Papyrus, fantasy;
   font-weight: bold;
-  color: white
+  color: white;
 }
 
 .title-2{
